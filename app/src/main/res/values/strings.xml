@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Health</string>
+    <string name="tab_repmax">RepMax</string>
+    <string name="tab_bmi">BMI</string>
+    <string name="tab_tdee">TDEE</string>
+
+    <string name="text_minus">—</string>
+    <string name="text_plus">+</string>
+    <string name="text_weight_lifted">Weight Lifted</string>
+    <string name="text_reps_performed">Reps Performed</string>
+    <string name="text_default_val_weight_lifted">225</string>
+    <string name="text_default_val_reps_performed">8</string>
+    <string name="text_default_val_old">19</string>
+
+    <string name="title_one_rep_max">One rep max</string>
+    <string name="title_percent_of_1RM">Percentages of 1 RM</string>
+    <string name="text_one_rep_max">1 Rep Max</string>
+    <string name="text_two_rep_max">2 Rep Max</string>
+    <string name="text_105_percent">105%</string>
+    <string name="text_102.5_percent">102,5%</string>
+    <string name="text_default_val_weight">40</string>
+    <string name="text_default_val_height">150</string>
+
+    <string name="text_height">Height(cm)</string>
+    <string name="text_weight">Weight(kg)</string>
+    <string name="btn_calculate_bmi">calculate</string>
+    <string name="btn_show_bmi_table">Show BMI Table</string>
+    <string name="text_result">Your result:</string>
+    <string name="text_status">Nutritional status:</string>
+
+    <!-- dialog table bmi-->
+    <string name="title_col_weight_categories">Weight Categories</string>
+    <string name="title_col_BMI">BMI(kg/m*m)</string>
+    <string name="text_underweight">Underweight</string>
+    <string name="text_val_underweight">Below 18.5</string>
+    <string name="text_normal_weight">Normal Weight</string>
+    <string name="text_val_normal_weight">18.5 — 24.9</string>
+    <string name="text_pre_obesity">Pre-obesity</string>
+    <string name="text_val_pre_obesity">25 — 29.9</string>
+    <string name="text_obesity_class_1">Obesity Class I</string>
+    <string name="text_val_obesity_class_1">30 — 34.9</string>
+    <string name="text_obesity_class_2">Obesity Class II</string>
+    <string name="text_val_obesity_class_2">35 — 39.9</string>
+    <string name="text_obesity_class_3">Obesity Class III</string>
+    <string name="text_val_obesity_class_3">Over 40</string>
+
+    <!-- status -->
+    <string name="text_status_underweight">Underweight</string>
+    <string name="text_status_normal_weight">Normal Weight</string>
+    <string name="text_status_pre_obesity">Pre-obesity</string>
+    <string name="text_status_obesity_class_1">Obesity Class I</string>
+    <string name="text_status_obesity_class_2">Obesity Class II</string>
+    <string name="text_status_obesity_class_3">Obesity Class III</string>
+
+    <!-- comment-->
+    <string name="text_comment_underweight">You should eat more nutritious foods</string>
+    <string name="text_comment_normal_weight">Your nutritional status index is ideal and should be maintained</string>
+    <string name="text_comment_pre_obesity">You need to have a reasonable diet to not fall into obesity</string>
+    <string name="text_comment_obesity_class_1">Your condition starts to get worse if you don\'t lose weight, you should eat sensibly and exercise regularly</string>
+    <string name="text_comment_obesity_class_2">Your condition is really serious, you can suffer from obesity diseases, you should consult with your doctor to have a reasonable diet.</string>
+    <string name="text_comment_obesity_class_3">Your condition is especially serious, and the diseases related to obesity can kill you, you should see your doctor to have a reasonable diet and exercise regularly</string>
+
+    <string name="text_activity_levels_for_the_day">Activity levels for the day</string>
+
+    <string-array name="activity_levels_for_the_day">
+        <item>Sedentary – little or no exercise</item>
+        <item>Mild exercise – exercise 1–3 times a week</item>
+        <item>Moderate exercise – exercise 3–5 times a week</item>
+        <item>Very active – exercise 5–6 times a week</item>
+        <item>Heavy exercise – exercise or do hard work</item>
+    </string-array>
+
+    <string name="text_male">Male</string>
+    <string name="text_female">Female</string>
+    <string name="text_your_bmr">Your BMR:</string>
+    <string name="text_your_tdee">Your TDEE:</string>
+    <string name="text_old">Old</string>
+
+
+    <string name="exam_rm">2RM</string>
+    <string name="exam_kg">256 kg</string>
+
+
+
+
+</resources>

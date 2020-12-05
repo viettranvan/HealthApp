@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    android:stretchColumns="*"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TableRow android:background="@color/bg_green"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/bg_black"
+            android:text="@string/title_col_weight_categories"/>
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/bg_black"
+            android:text="@string/title_col_BMI"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_underweight"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_val_underweight"/>
+    </TableRow>
+
+    <TableRow android:background="@color/bg_pink">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_normal_weight"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_val_normal_weight"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_pre_obesity"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_val_pre_obesity"/>
+    </TableRow>
+
+    <TableRow android:background="@color/bg_pink">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_obesity_class_1"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_val_obesity_class_1"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_obesity_class_2"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_val_obesity_class_2"/>
+    </TableRow>
+
+    <TableRow android:background="@color/bg_pink">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_obesity_class_3"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/bg_black"
+            android:text="@string/text_val_obesity_class_3"/>
+    </TableRow>
+</TableLayout>

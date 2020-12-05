@@ -1,21 +1,37 @@
 package com.example.health.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager;
 import com.example.health.R;
 import com.example.health.adapter.ViewPagerAdapter;
+import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.Objects;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private static AHBottomNavigation ahBottomNavigation;
     private AHBottomNavigationViewPager ahBottomNavigationViewPager;
+    private DrawerLayout drawerLayout;
+    private NavigationView menuNavigationView;
+    private Toolbar toolbar;
+    private TextView toolBarTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +40,17 @@ public class MainActivity extends AppCompatActivity {
 
         anhXa();
         setUpViewPager();
+        actionToolBar();
+        menuNavigationView.setNavigationItemSelectedListener(this);
     }
 
     private void anhXa() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolBarTitle = findViewById(R.id.tv_toolbar_title);
         ahBottomNavigation = findViewById(R.id.AHBottomNavigation);
         ahBottomNavigationViewPager = findViewById(R.id.AHBottomNavigationViewPager);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        menuNavigationView = findViewById(R.id.navigation_view);
     }
 
     private void setUpViewPager() {
@@ -52,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onTabSelected(int position, boolean wasSelected) {
                 ahBottomNavigationViewPager.setCurrentItem(position);
+                setToolbarTitle(position);
                 return true;
             }
         });
@@ -69,6 +92,65 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
+            }
+        });
+    }
+
+    // su kien khi item trong drawer menu dc click
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_home:
+                drawerLayout.closeDrawer(GravityCompat.START);
+                ahBottomNavigation.setCurrentItem(0);
+                break;
+            case R.id.nav_contact:
+//                Intent intent = new Intent(MainActivity.this,ContactActivity.class);
+//                startActivity(intent);
+
+                startActivity(new Intent(MainActivity.this,ContactActivity.class));
+                break;
+            case R.id.nav_guide:
+                startActivity(new Intent(MainActivity.this, GuideActivity.class));
+                break;
+        }
+        return true;
+    }
+
+    private void actionToolBar() {
+        setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        toolBarTitle.setText(getString(R.string.tab_repmax)); // trang chủ
+        toolbar.setNavigationIcon(R.drawable.ic_action_menu);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+    }
+
+    private void setToolbarTitle(int position) {
+        switch (position) {
+            case 0:
+                setSupportActionBar(toolbar);
+                toolBarTitle.setText(getString(R.string.tab_repmax)); // REPMAX
+                break;
+            case 1:
+                setSupportActionBar(toolbar);
+                toolBarTitle.setText(getString(R.string.tab_bmi)); // BMI
+                break;
+            case 2:
+                setSupportActionBar(toolbar);
+                toolBarTitle.setText(getString(R.string.tab_tdee)); // TDEE
+
+                break;
+        }
+        toolbar.setNavigationIcon(R.drawable.ic_action_menu);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
     }

@@ -30,7 +30,13 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    // thư viện bottom tab
     implementation 'com.aurelhubert:ahbottomnavigation:2.3.4'
     implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.github.JarvanMo:ExoVideoView:2.1.6'
+    implementation 'com.google.android.exoplayer:exoplayer:2.11.0'
+    implementation 'com.borjabravo:readmoretextview:2.1.0'
+
 }

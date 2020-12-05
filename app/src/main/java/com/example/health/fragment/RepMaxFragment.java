@@ -26,7 +26,7 @@ public class RepMaxFragment extends Fragment {
 
     Button btnMinusWeightLifted, btnPlusWeightLifted, btnMinusRepsPerformed, btnPlusRepsPerformed;
     EditText edtWeightLifted, edtRepsPerformed;
-    TextView tvOneRepMax, tvTwoRepMax, tvOneRepMaxPercentOfOneRM, tvTwoRepMaxPercentOfOneRM;
+    TextView tvOneRepMax, tvOneRepMaxPercentOfOneRM, tvTwoRepMaxPercentOfOneRM;
 
     RecyclerView recyclerViewRepMax, recyclerViewRepMaxPercentOfOneRM;
     ArrayList<RepMax> listRepMax;
@@ -140,7 +140,6 @@ public class RepMaxFragment extends Fragment {
         edtRepsPerformed = view.findViewById(R.id.edt_reps_performed);
         recyclerViewRepMaxPercentOfOneRM = view.findViewById(R.id.recycler_view_rep_max_percent);
         tvOneRepMax = view.findViewById(R.id.tv_one_rep_max);
-        tvTwoRepMax = view.findViewById(R.id.tv_two_rep_max);
         tvOneRepMaxPercentOfOneRM = view.findViewById(R.id.tv_one_rep_max_105_percent);
         tvTwoRepMaxPercentOfOneRM = view.findViewById(R.id.tv_two_rep_max_102_5_percent);
 
@@ -174,23 +173,23 @@ public class RepMaxFragment extends Fragment {
         int rep = Integer.parseInt(edtRepsPerformed.getText().toString());
 
         oneRepMax = (int) Math.round(weight / (1.0278 - 0.0278 * rep));
-        tvOneRepMax.setText(String.valueOf(oneRepMax) + " kg");
-        tvTwoRepMax.setText(String.valueOf((int) Math.round(oneRepMax * 0.95)) + " kg");
+        tvOneRepMax.setText(String.valueOf(oneRepMax));
 
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.95)) + " kg", "2RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.93)) + " kg", "3RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.90)) + " kg", "4RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.87)) + " kg", "5RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.85)) + " kg", "6RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.83)) + " kg", "7RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.80)) + " kg", "8RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.77)) + " kg", "9RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.75)) + " kg", "10RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.73)) + " kg", "11RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.70)) + " kg", "12RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.67)) + " kg", "13RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.65)) + " kg", "14RM"));
-        listRepMax.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.63)) + " kg", "15RM"));
+
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.95) + " kg", "2RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.93) + " kg", "3RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.90) + " kg", "4RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.87) + " kg", "5RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.85) + " kg", "6RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.83) + " kg", "7RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.80) + " kg", "8RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.77) + " kg", "9RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.75) + " kg", "10RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.73) + " kg", "11RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.70) + " kg", "12RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.67) + " kg", "13RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.65) + " kg", "14RM"));
+        listRepMax.add(new RepMax((int) Math.round(oneRepMax * 0.63) + " kg", "15RM"));
 
         adapter.notifyDataSetChanged();
 
@@ -200,22 +199,23 @@ public class RepMaxFragment extends Fragment {
     private void setDataPercentOneRM(int oneRepMax) {
         listRepMaxPercentOfOneRM.clear();
 
-        tvOneRepMaxPercentOfOneRM.setText(String.valueOf((int) Math.round(oneRepMax * 1.05)) + " kg");
-        tvTwoRepMaxPercentOfOneRM.setText(String.valueOf((int) Math.round(oneRepMax * 1.025)) + " kg");
+        String percent_105 = (int) Math.round(oneRepMax * 1.05) + " kg";
+        String percent_102_5 = (int) Math.round(oneRepMax * 1.025) + " kg";
+        tvOneRepMaxPercentOfOneRM.setText(percent_105);
+        tvTwoRepMaxPercentOfOneRM.setText(percent_102_5);
 
-
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.95)) + " kg", "2RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.90)) + " kg", "3RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.85)) + " kg", "4RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.80)) + " kg", "5RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.75)) + " kg", "6RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.70)) + " kg", "7RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.65)) + " kg", "8RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.60)) + " kg", "9RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.55)) + " kg", "10RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.50)) + " kg", "11RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.45)) + " kg", "12RM"));
-        listRepMaxPercentOfOneRM.add(new RepMax(String.valueOf((int) Math.round(oneRepMax * 0.40)) + " kg", "13RM"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.95) + " kg", "95%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.90) + " kg", "90%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.85) + " kg", "85%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.80) + " kg", "80%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.75) + " kg", "75%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.70) + " kg", "70%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.65) + " kg", "65%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.60) + " kg", "60%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.55) + " kg", "55%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.50) + " kg", "50%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.45) + " kg", "45%"));
+        listRepMaxPercentOfOneRM.add(new RepMax((int) Math.round(oneRepMax * 0.40) + " kg", "40%"));
 
 
         percentAdapter.notifyDataSetChanged();

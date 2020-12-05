@@ -76,11 +76,52 @@
     <string name="text_your_tdee">Your TDEE:</string>
     <string name="text_old">Old</string>
 
+    <!-- Drawer menu-->
+    <string name="nav_home">Home</string>
+    <string name="nav_contact">Contact</string>
+    <string name="nav_guide">Guide</string>
+
+
+    <!-- contact activity-->
+    <string name="title_contact">If you have any questions, contact us with:</string>
+    <string name="text_address">280 An Duong Vuong,Ward 4, District 5, HCM city</string>
+    <string name="text_email">leminhtrung@gmail.com</string>
+    <string name="text_phone">0123456789</string>
+    <string name="text_message">0123456789</string>
+
+    <!-- Guide -->
+    <string name="text_guide">Guide</string>
+    <string name="text_definition">Definition</string>
+    <string name="title_question_repmax">What is 1 rep max?</string>
+    <string name="title_question_bmr">What is BMR?</string>
+    <string name="title_question_bmi">What is BMI?</string>
+    <string name="title_question_tdee">What is TDEE?</string>
+    <string name="text_definition_repmax">- The one-repetition maximum test (1RM) is one of the most common measures used to find out the heaviest weight you can press just once (but not twice). You can also do multiple-repetition tests.</string>
+    <string name="text_definition_bmr_1">
+        - Your BMR is your ‘basal metabolic rate’. It’s the amount of energy your body burns if you did nothing but rest for 24 hours.
+    </string>
+    <string name="text_definition_bmr_2">
+        - It represents the minimum amount of energy, i.e. calories, your body requires to remain functioning.
+    </string>
+    <string name="text_definition_bmr_3">
+        - It doesn’t include the calories your body uses for exercise or general movement
+    </string>
+    <string name="text_definition_bmi">
+        - Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.
+    </string>
+
+    <string name="text_definition_tdee_1">
+        - Your TDEE is your ‘total daily energy expenditure’. This is the amount of energy, i.e. calories, your body burns every day performing its bodily functions and also physical movement like daily activities and exercise.
+    </string>
+    <string name="text_definition_tdee_2">
+        - It’s useful to calculate your TDEE to know how many calories you should be eating to maintain, lose, or gain weight (dependent on your goals).
+    </string>
+    <string name="text_definition_tdee_3">
+        - Not everyone’s TDEE is the same, as lots of factors can affect how much energy your body burns every day, like age, gender, height, weight, genetics, and activity level (i.e. how much you move).
+    </string>
 
     <string name="exam_rm">2RM</string>
     <string name="exam_kg">256 kg</string>
-
-
 
 
 </resources>

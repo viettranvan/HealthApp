@@ -10,12 +10,13 @@
     <color name="tab_product">#2196F3</color>
     <color name="tab_profile">#8BC34A</color>
 
-    <color name="bg_gray">#C6C6C4</color>
+    <color name="bg_gray">#FAF6F6</color>
     <color name="bg_white">#FFFFFF</color>
     <color name="bg_black">#000000</color>
     <color name="bg_blue">#2196F3</color>
     <color name="bg_green">#4BB65D</color>
     <color name="bg_pink">#E6A7BD</color>
+    <color name="bg_red">#F44336</color>
 
 
 </resources>

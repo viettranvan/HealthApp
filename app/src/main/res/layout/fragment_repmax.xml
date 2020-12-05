@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorAccent"
+    android:background="@color/bg_gray"
     android:orientation="vertical">
 
     <LinearLayout
@@ -166,62 +166,26 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="10">
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="5"
-                        android:layout_marginBottom="10dp">
+                    <TextView
+                        android:id="@+id/tv_one_rep_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/exam_kg"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:textColor="@color/bg_black"
+                        />
 
-                        <TextView
-                            android:id="@+id/tv_one_rep_max"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/exam_kg"
-                            android:textStyle="bold"
-                            android:textSize="30sp"
-                            android:textColor="@color/bg_black"
-                            android:layout_marginStart="20dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/text_one_rep_max"
-                            android:textSize="20sp"
-                            android:layout_marginStart="20dp"
-                            />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="5"
-                        android:layout_marginBottom="10dp">
-
-                        <TextView
-                            android:id="@+id/tv_two_rep_max"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/exam_kg"
-                            android:textStyle="bold"
-                            android:textSize="30sp"
-                            android:textColor="@color/bg_black"
-                            android:layout_marginStart="20dp"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/text_two_rep_max"
-                            android:layout_marginStart="20dp"
-                            android:textSize="20sp"
-                            />
-                    </LinearLayout>
-
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_one_rep_max"
+                        android:textSize="20sp"
+                        />
                 </LinearLayout>
 
 
